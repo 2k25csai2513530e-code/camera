@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hand Magic - Fiber Optics</title>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="hand-magic-1.css">
+</head>
+<body>
+    <div id="splash">
+        <div class="spinner"></div>
+        <div style="font-size: 1.5rem; font-weight: bold;">Initializing Neural Matrix...</div>
+        <div style="font-size: 0.9rem; margin-top:10px; color:#aaa;">Please grant camera permissions</div>
+    </div>
+    
+    <div class="ui">
+        <div class="status-bar" id="status">HANDS DETECTED: 0</div>
+        <div class="hint">Hold hands up to generate fiber connections. Move fingers to release magical particles.</div>
+        <div class="themes">
+            <button onclick="setTheme('purple')">Purple</button>
+            <button onclick="setTheme('gold')">Gold</button>
+            <button onclick="setTheme('cyan')">Cyan</button>
+            <button onclick="setTheme('rainbow')">Rainbow</button>
+        </div>
+    </div>
+    
+    <video id="video" autoplay playsinline></video>
+    <canvas id="bgCanvas"></canvas>
+    <canvas id="fxCanvas"></canvas>
+
+    <script src="hand-magic-1.js"></script>
+</body>
+</html>

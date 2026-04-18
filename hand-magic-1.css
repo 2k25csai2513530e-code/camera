@@ -1,0 +1,31 @@
+body, html { margin: 0; padding: 0; overflow: hidden; background: #000; font-family: 'Segoe UI', sans-serif; color: white;}
+        #bgCanvas { position: absolute; transform: scaleX(-1); z-index: 1;}
+        #fxCanvas { position: absolute; transform: scaleX(-1); z-index: 2;}
+        video { display: none; }
+        
+        .ui { 
+            position: absolute; top: 20px; left: 0; width: 100vw; z-index: 10; 
+            display: flex; flex-direction: column; align-items: center; gap: 15px; pointer-events: none; 
+        }
+        
+        .status-bar {
+            background: rgba(0,0,0,0.6); padding: 10px 30px; border-radius: 20px; font-weight: bold; border: 1px solid rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+        }
+        
+        .hint { font-size: 0.9em; opacity: 0.8; }
+        
+        .themes { display: flex; gap: 15px; pointer-events: auto; }
+        button { 
+            background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3); color: white; 
+            padding: 8px 20px; cursor: pointer; border-radius: 30px; transition: 0.3s;
+            font-weight: bold; text-transform: uppercase; letter-spacing: 1px;
+        }
+        button:hover { background: rgba(255,255,255,0.3); border-color: white; transform: scale(1.05);}
+        
+        #splash { 
+            position: fixed; inset: 0; background: #000; z-index: 20; 
+            display: flex; flex-direction: column; align-items: center; justify-content: center; 
+        }
+        .spinner { width: 50px; height: 50px; border: 5px solid rgba(255,255,255,0.1); border-top-color: #fff; border-radius: 50%; animation: spin 1s infinite linear; margin-bottom: 20px;}
+        @keyframes spin { 100% { transform: rotate(360deg); } }
